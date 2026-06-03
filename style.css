@@ -1,57 +1,49 @@
-/* Central de Variáveis - Facilita a manutenção e garante consistência */
-:root {
-    --verde-agrinho: #2ecc71;
-    --verde-escuro: #27ae60;
-    --amarelo-destaque: #cfab1b;
-    --cor-texto-escuro: #2d3436;
-    --branco-puro: #ffffff;
-    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+/* ========================================================
+   RESPONSIVIDADE: ADAPTANDO PARA TELAS MAIORES (TEMA NEON)
+   ======================================================== */
 
-/* Reset Global - Garante que o site comece do zero em qualquer navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: var(--cor-texto-escuro);
-    line-height: 1.6;
-    background-color: var(--branco-puro);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 /* Tablets (Telas maiores que 600px) */
 @media screen and (min-width: 600px) {
     body {
-        background-color: #e3f2fd;
+        /* Muda o fundo para um roxo bem escuro e místico */
+        background-color: #120e2e; 
     }
 
     .container {
+        /* Mantém os cards alinhados em linha quando a tela cresce */
+        display: flex; /* Garante que o flexbox está ativo */
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 15px; /* Adicionei um espacinho entre os cards */
     }
 
     .card {
+        /* Faz os cards se dividirem igualmente na tela */
         flex: 1;
+        min-width: 250px; /* Evita que eles esmaguem muito */
     }
 }
 
-/* Desktops (Telas maiores que 1024px) */
+/* Desktops / Computadores (Telas maiores que 1024px) */
 @media screen and (min-width: 1024px) {
     body {
-        background-color: #e8f5e9;
+        /* No computador, o fundo fica preto total para destacar os neons */
+        background-color: #0b0b0e; 
     }
 
     .card {
-        padding: 40px;
-        border: 2px solid #4caf50;
+        padding: 40px; /* Dá mais espaço interno dentro do card */
+        border: 2px solid #00ffcc; /* A borda do card brilha em VERDE CIANO */
+        box-shadow: 0 0 15px #00ffcc; /* Efeito extra: adiciona um brilho neon em volta do card */
     }
 }
+
+/* ESTILO PADRÃO DO CARD (PARA CELULARES OU TELAS MENORES) */
 .card {
-    padding: 2.5rem;
-    border: 2px solid #4caf50;
+    padding: 2.5rem; /* Espaçamento interno */
+    background-color: #121214; /* Fundo do card cinza escuro */
+    color: #ffffff; /* Texto do card em branco */
+    border: 2px solid #8a2be2; /* Na tela pequena, a borda começa ROXA */
+    border-radius: 8px; /* Cantos arredondados */
+    transition: all 0.3s ease; /* Faz a mudança de cor entre as telas ser suave */
 }
