@@ -2,85 +2,29 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Missão Espacial</title>
+    <title>Inovação no Agro | Agrinho</title>
 
     <style>
         /* AQUI COMEÇA O CSS PARA DAR COR E TAMANHO */
 
-        /* ESTILO PARA O BLOCO ESCURO QUE SEGURA TUDO (LEMBRANDO O ESPAÇO) */
-        .bloco-espacial {
-            background-color: #1a1a2e; /* DEFINE A COR DE FUNDO COMO AZUL ESCURO/ESPACIAL */
-            padding: 30px; /* COLOCA UM ESPAÇO DENTRO DO BLOCO */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* USA UMA FONTE MODERNA */
+        /* ESTILO PARA O BLOCO VERDE ESCURO (LEMBRANDO A FORÇA DA TERRA E PLANTAÇÃO) */
+        .bloco-agro {
+            background-color: #1b4d3e; /* DEFINE A COR DE FUNDO COMO VERDE ESCURO */
+            padding: 25px; /* COLOCA UM ESPAÇO DENTRO DO BLOCO */
+            font-family: 'Segoe UI', Arial, sans-serif; /* USA UMA FONTE MODERNA E LIMPA */
             text-align: center; /* ALINHA TODO O TEXTO NO MEIO */
-            color: #ffffff; /* COLOCA A COR DA LETRA COMO BRANCO */
-            border-radius: 10px; /* DEIXA AS CORDAS DO BLOCO ARREDONDADAS */
+            color: #ffffff; /* COLOCA A COR DA LETRA PRINCIPAL COMO BRANCO */
+            border-radius: 8px; /* ARREDONDA AS BORDAS DO BLOCO PRINCIPAL */
         }
 
-        /* ESTILO PARA A CAIXA QUE FICA NO CENTRO (COMO UMA JANELA DE NAVE) */
-        .janela-nave {
-            background-color: #16213e; /* UM AZUL UM POUCO MAIS CLARO QUE O FUNDO */
-            border: 2px solid #0f3460; /* COLOCA UMA BORDA AZUL METÁLICA */
-            margin: 25px; /* EMPURRA AS COISAS DE FORA */
+        /* ESTILO PARA A CAIXA QUE FICA NO CENTRO */
+        .caixa-central {
+            background-color: #f9f9f9; /* FUNDO CLARO PARA DAR DESTAQUE */
+            border: 2px solid #d4af37; /* BORDA COR DE OURO/TRIGO DE 2 PIXELS */
+            margin: 20px; /* EMPURRA AS COISAS DE FORA */
             padding: 20px; /* EMPURRA O TEXTO DE DENTRO */
-            color: #e2e8f0; /* COR DO TEXTO PARA FICAR CONFORTÁVEL DE LER */
-            border-radius: 8px;
+            color: #2c3e50; /* MUDA A LETRA PARA UM CINZA ESCURO PARA LER MELHOR */
+            border-radius: 6px;
         }
 
-        /* ESTILO DO BOTÃO DE LANÇAMENTO (LARANJA NEON) */
-        #btn-foguete {
-            background: #e94560; /* COR DO BOTÃO (LARANJA/VERMELHO VIBRANTE) */
-            color: white; /* TEXTO DO BOTÃO EM BRANCO */
-            border: none; /* TIRA A BORDA PADRÃO FEIA */
-            padding: 12px 25px; /* DEFINE O TAMANHO INTERNO DO BOTÃO */
-            font-weight: bold; /* DEIXA O TEXTO EM NEGRITO */
-            font-size: 16px;
-            cursor: pointer; /* MOSTRA A MÃOZINHA QUANDO PASSA O MOUSE */
-            border-radius: 5px; /* ARREDONDA O BOTÃO */
-            transition: 0.3s; /* FAZ UM EFEITO SUAVE AO PASSAR O MOUSE */
-        }
-
-        /* EFEITO QUANDO O MOUSE PASSA POR CIMA DO BOTÃO */
-        #btn-foguete:hover {
-            background: #ff6b81; /* MUDA PARA UMA COR MAIS CLARA */
-        }
-
-        /* ESTILO DO TEXTO DO RODAPÉ */
-        .rodape-espacial {
-            font-size: 12px; /* DEIXA A LETRA PEQUENA */
-            margin-top: 50px; /* EMPURRA O RODAPÉ PARA BAIXO */
-            border-top: 1px solid #0f3460; /* CRIA UMA LINHA DIVISÓRIA */
-            padding-top: 10px;
-            color: #8a99ad; /* COR DO TEXTO MAIS APAGADA */
-        }
-    </style>
-</head>
-<body>
-    
-    <div class="bloco-espacial">
-
-        <div style="font-size: 28px; font-weight: bold; letter-spacing: 2px;">
-            🚀 Rumo ao Desconhecido
-        </div>
-        
-        <div class="janela-nave">
-            <p style="font-size: 18px;">
-                Você sabia que a luz do Sol leva cerca de 8 minutos e 20 segundos para chegar até a Terra?
-            </p>
-
-            <button id="btn-foguete" onclick="alert('Prepare-se para o lançamento! 3... 2... 1... 🌌')">
-                LANÇAR FOGUETE
-            </button>
-        </div>
-
-        <div class="rodape-espacial">
-            Exploração Espacial © 2026 - Criado por mim
-        </div>
-    </div>
-
-    <script>
-        // MANDA UMA MENSAGEM PARA O CONSOLE DO DESENVOLVEDOR
-        console.log("Sistemas da nave iniciados. O site abriu com sucesso!");
-    </script>
-</body>
-</html>
+        /* ESTILO DO BOTÃO INTERATIVO (DOURADO DA COR DO TRIGO/

@@ -1,88 +1,53 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Estação Espacial Alpha</title>
+// ========================================================
+// ARQUIVO: script.js (PROJETO AGRINHO - SUSTENTABILIDADE)
+// ========================================================
 
-    <style>
-        /* AQUI COMEÇA O NOVO CSS COM ESTILO NEON */
+// --- CONFIGURAÇÃO INICIAL (VERSÃO 2 REFEITA) ---
+// Preço fixo do quilo da semente de milho especial para o projeto
+const PRECO_SEMENTE = 150.0;
 
-        /* ESTILO PARA O BLOCO PRINCIPAL (FUNDO TOTALMENTE PRETO) */
-        .bloco-cyber {
-            background-color: #0b0b0e; /* PRETO PROFUNDO */
-            padding: 35px; /* ESPAÇO INTERNO */
-            font-family: 'Courier New', Courier, monospace; /* FONTE ESTILO COMPUTADOR ANTIGO */
-            text-align: center; /* ALINHA O TEXTO NO MEIO */
-            color: #00ffcc; /* LETRAS EM VERDE CIANO BRILHANTE */
-            border: 3px solid #8a2be2; /* BORDA ROXA AO REDOR DE TUDO */
-            border-radius: 15px; /* CURVA BEM AS BORDAS */
-        }
-
-        /* ESTILO PARA A CAIXA CENTRAL (ESTILO TERMINAL DE COMANDO) */
-        .caixa-terminal {
-            background-color: #121214; /* CINZA QUASE PRETO */
-            border: 1px dashed #00ffcc; /* BORDA TRACEJADA EM CIANO */
-            margin: 30px; /* ESPAÇO POR FORA */
-            padding: 25px; /* ESPAÇO POR DENTRO */
-            color: #ffffff; /* TEXTO EM BRANCO PARA DESTACAR A LEITURA */
-            border-radius: 5px;
-        }
-
-        /* ESTILO DO BOTÃO DE TRANSMISSÃO */
-        #btn-transmissao {
-            background: #8a2be2; /* FUNDO ROXO */
-            color: #ffffff; /* LETRA BRANCA */
-            border: 2px solid #00ffcc; /* BORDA CIANO PARA CASAR OS DOIS NEONS */
-            padding: 14px 30px; /* TAMANHO DO BOTÃO */
-            font-weight: bold; /* TEXTO EM NEGRITO */
-            font-size: 15px;
-            cursor: pointer; /* ICONE DA MÃOZINHA */
-            letter-spacing: 1px; /* SEPARA UM POUCO AS LETRAS */
-            transition: 0.2s; /* VELOCIDADE DO EFEITO */
-        }
-
-        /* EFEITO QUANDO PASSA O MOUSE NO BOTÃO */
-        #btn-transmissao:hover {
-            background: #00ffcc; /* INVERTE: FUNDO VIRA CIANO */
-            color: #0b0b0e; /* LETRA VIRA PRETA */
-        }
-
-        /* ESTILO DO RODAPÉ */
-        .rodape-terminal {
-            font-size: 11px; /* LETRA PEQUENININHA */
-            margin-top: 60px; /* EMPURRA BEM PARA BAIXO */
-            border-top: 1px solid #333; /* LINHA ESCURA DISCRETA */
-            padding-top: 15px;
-            color: #555555; /* CINZA ESCURO */
-        }
-    </style>
-</head>
-<body>
+/**
+ * FUNÇÃO 1: PROCESSAR PRODUÇÃO DE BIOPLÁSTICO
+ * Pega os valores digitados na tela, faz o cálculo e valida o limite.
+ */
+function calcularProducaoBioplastico() {
+    // Pega os valores dos inputs do HTML (Convertendo para número)
+    const quantidadeMilho = Number(document.getElementById("i1").value);
+    const fatorRendimento = Number(document.getElementById("i2").value);
     
-    <div class="bloco-cyber">
+    // Faz a multiplicação (Antigo x * y)
+    const totalProduzido = quantidadeMilho * fatorRendimento;
+    const elementoResultado = document.getElementById("res");
 
-        <div style="font-size: 26px; font-weight: bold; text-shadow: 0 0 10px #00ffcc;">
-            🛸 BASE ESPACIAL NEON
-        </div>
-        
-        <div class="caixa-terminal">
-            <p style="font-size: 16px; line-height: 1.5;">
-                Curiosidade: No espaço profundo, o silêncio é absoluto. Como o som precisa de matéria para se propagar (como o ar ou a água) e o espaço é um vácuo, ninguém consegue ouvir nada por lá!
-            </p>
+    // Validação de limite (Se passar de 100kg, avisa que o custo/esforço está alto)
+    if (totalProduzido > 100) {
+        elementoResultado.style.color = "red";
+        alert("Atenção: Volume de produção muito alto para este lote!");
+    } else {
+        elementoResultado.style.color = "green";
+    }
 
-            <button id="btn-transmissao" onclick="alert('📡 Transmitindo dados para a Terra... Sinal enviado!')">
-                ABRIR FREQUÊNCIA
-            </button>
-        </div>
+    // Atualiza o texto na tela com o resultado
+    elementoResultado.innerHTML = "Total de Bioplástico: " + totalProduzido + " kg";
+    console.log("Calculado: Produção de bioplástico atualizada.");
+}
 
-        <div class="rodape-terminal">
-            Sistemas Alpha v2.0 - Desenvolvido por mim
-        </div>
-    </div>
+/**
+ * FUNÇÃO 2 (PARTE A): CALCULAR INVESTIMENTO TOTAL
+ * Recebe a quantidade de sementes e retorna o valor em dinheiro.
+ */
+function calcularInvestimentoTotal(quantidade) {
+    return quantidade * PRECO_SEMENTE;
+}
 
-    <script>
-        // MENSAGEM ALTERADA NO CONSOLE
-        console.log("Frequência de rádio estabelecida. Terminal pronto.");
-    </script>
-</body>
-</html>
+/**
+ * FUNÇÃO 2 (PARTE B): ATUALIZAR INTERFACE
+ * Exibe o valor financeiro na tela com a cor correspondente ao gasto.
+ */
+function atualizarInterface(valorTotal) {
+    const display = document.getElementById("resultadoDisplay");
+    
+    // Mostra o valor formatado como moeda (R$)
+    display.innerText = `O investimento total em sementes é: R$ ${valorTotal.toFixed(2)}`;
+    
+    // Se o investimento passar de

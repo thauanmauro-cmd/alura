@@ -1,49 +1,62 @@
 /* ========================================================
-   RESPONSIVIDADE: ADAPTANDO PARA TELAS MAIORES (TEMA NEON)
+   ARQUIVO: style.css (PROJETO AGRINHO - SUSTENTABILIDADE)
    ======================================================== */
 
-/* Tablets (Telas maiores que 600px) */
+/* --------------------------------------------------------
+   ESTILO PADRÃO (Para telas pequenas / Celulares)
+   -------------------------------------------------------- */
+body {
+    background-color: #f9fbf7; /* Um fundo off-white bem clarinho e limpo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* No celular, os itens ficam um embaixo do outro */
+    gap: 15px;
+}
+
+.card {
+    background-color: #ffffff; /* Fundo branco para destacar o conteúdo */
+    padding: 2.5rem; /* Espaçamento interno padrão */
+    border: 2px solid #4caf50; /* Borda verde clássica do Agrinho */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    transition: all 0.3s ease; /* Transição suave quando a tela muda de tamanho */
+}
+
+
+/* --------------------------------------------------------
+   RESPONSIVIDADE: TABLETS (Telas maiores que 600px)
+   -------------------------------------------------------- */
 @media screen and (min-width: 600px) {
     body {
-        /* Muda o fundo para um roxo bem escuro e místico */
-        background-color: #120e2e; 
+        background-color: #e8f5e9; /* Muda o fundo para um verde folha bem suave */
     }
 
     .container {
-        /* Mantém os cards alinhados em linha quando a tela cresce */
-        display: flex; /* Garante que o flexbox está ativo */
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 15px; /* Adicionei um espacinho entre os cards */
+        flex-direction: row; /* Os cards passam a ficar lado a lado */
+        flex-wrap: wrap;    /* Se não couber, eles quebram para a linha de baixo */
     }
 
     .card {
-        /* Faz os cards se dividirem igualmente na tela */
-        flex: 1;
-        min-width: 250px; /* Evita que eles esmaguem muito */
+        flex: 1; /* Os cards se dividem e crescem igualmente na tela */
     }
 }
 
-/* Desktops / Computadores (Telas maiores que 1024px) */
+
+/* --------------------------------------------------------
+   RESPONSIVIDADE: DESKTOPS (Telas maiores que 1024px)
+   -------------------------------------------------------- */
 @media screen and (min-width: 1024px) {
     body {
-        /* No computador, o fundo fica preto total para destacar os neons */
-        background-color: #0b0b0e; 
+        background-color: #c8e6c9; /* Um tom de verde um pouquinho mais vivo no computador */
     }
 
     .card {
-        padding: 40px; /* Dá mais espaço interno dentro do card */
-        border: 2px solid #00ffcc; /* A borda do card brilha em VERDE CIANO */
-        box-shadow: 0 0 15px #00ffcc; /* Efeito extra: adiciona um brilho neon em volta do card */
+        padding: 40px; /* Mais espaço interno para telas grandes */
+        border: 2px solid #2e7d32; /* Uma borda verde mais escura e firme */
+        box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15); /* Sombra suave para dar elegância */
     }
-}
-
-/* ESTILO PADRÃO DO CARD (PARA CELULARES OU TELAS MENORES) */
-.card {
-    padding: 2.5rem; /* Espaçamento interno */
-    background-color: #121214; /* Fundo do card cinza escuro */
-    color: #ffffff; /* Texto do card em branco */
-    border: 2px solid #8a2be2; /* Na tela pequena, a borda começa ROXA */
-    border-radius: 8px; /* Cantos arredondados */
-    transition: all 0.3s ease; /* Faz a mudança de cor entre as telas ser suave */
 }
