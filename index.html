@@ -1,109 +1,86 @@
-<html>
-    <head>
-        <title>Site do Projeto</title>
-
-        <style>
-            /* AQUI COMEÇA O CSS PARA DAR COR E TAMANHO */
-
-            /* ESTILO PARA O BLOCO VERDE QUE SEGURA TUDO */
-            .bloco1{
-                background-color: #2ecc71; /* DEFINE A COR DE FUNDO COMO VERDE */
-                padding: 20px; /* COLOCA UM ESPAÇO DE 20 PIXELS DENTRO */
-                font-family: sans-serif; /* USA UMA FONTE SEM AQUELAS SERIFAS */
-                text-align: center; /* ALINHA TODO O TEXTO NO MEIO */
-                color: white; /* COLOCA A COR DA LETRA COMO BRANCO */
-            } /* FECHA O ESTILO DO BLOCO 1 */
-
-
-            /* ESTILO PARA A CAIXA QUE FICA NO CENTRO */
-            .caixa-meio {
-                border: 2px solid #ccc; /* COLOCA UMA BORDA CINZA DE 2 PIXELS */
-                margin: 20px; /* EMPURRA AS COISAS DE FORA 20 PIXELS */
-                padding: 15px; /* EMPURRA O TEXTO DE DENTRO 15 PIXELS */
-                color: black; /* MUDA A LETRA PARA PRETO PARA LER MELHOR */
-            } /* FECHA O ESTILO DA CAIXA MEIO */
-
-            /* ESTILO DO BOTÃO AMARELO */
-            #btn1 {
-                background: #f1c40f; /* COLOCA O FUNDO DO BOTÃO EM AMARELO */
-                border: none; /* TIRA AQUELA BORDA FEIA DO BOTÃO */
-                padding: 10px; /* DEFINE O TAMANHO INTERNO DO BOTÃO */
-                font-weight: bold; /* DEIXA O TEXTO EM NEGRITO */
-                cursor: pointer; /* MOSTRA A MÃOZINHA QUANDO PASSA O MOUSE */
-            } /* FECHA O ESTILO DO BOTÃO */
-
-            /* ESTILO DO TEXTO DO RODAPÉ */
-            .texto1 {
-                font-size: 12px; /* DEIXA A LETRA BEM PEQUENININHA */
-                margin-top: 50px; /* EMPURRA O RODAPÉ PARA BAIXO */
-                border-top: 1px solid #000; /* CRIA UMA LINHA PRETA EM CIMA */
-            } /* FECHA O ESTILO DO TEXTO 1 */
-
-            /* FIM DA TAG DE ESTILO CSS */
-        </style>
-    </head>
-    <body>
-        
-        <div class="bloco1">
-
-            <div style="font-size: 25px;">Meu Projeto de Tecnologia</div>
-            <div class="caixa-meio">
-                <p>O milho vira bioplástico e depois vira música!</p>
-
-                <div id="btn1" onclick="alert('Incrível, né?')">CLIQUE AQUI</div>
-            </div>
-
-            <div class="texto1">Criado por mim</div>
-        </div>
-
-        <script>
-            // MANDA UMA MENSAGEM PARA O CONSOLE DO DESENVOLVEDOR
-            console.log("O site abriu."); // REGISTRA O LOG DE ABERTURA
-        </script>
-    </body>
-</html>
-<body>
-        
-    <div class="bloco1">
-
-        <div style="font-size: 25px;">Meu Projeto de Tecnologia</div>
-        <div class="caixa-meio">
-            <p>O milho vira bioplástico e depois vira música!</p>
-
-            <div id="btn1" onclick="alert('Incrível, né?')">CLIQUE AQUI</div>
-        </div>
-
-        <div class="texto1">Criado por mim</div>
-    </div>
-
-    <script>
-        // MANDA UMA MENSAGEM PARA O CONSOLE DO DESENVOLVEDOR
-        console.log("O site abriu."); // REGISTRA O LOG DE ABERTURA
-    </script>
-</body>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Sustentabilidade | Agrinho</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Missão Espacial</title>
+
+    <style>
+        /* AQUI COMEÇA O CSS PARA DAR COR E TAMANHO */
+
+        /* ESTILO PARA O BLOCO ESCURO QUE SEGURA TUDO (LEMBRANDO O ESPAÇO) */
+        .bloco-espacial {
+            background-color: #1a1a2e; /* DEFINE A COR DE FUNDO COMO AZUL ESCURO/ESPACIAL */
+            padding: 30px; /* COLOCA UM ESPAÇO DENTRO DO BLOCO */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* USA UMA FONTE MODERNA */
+            text-align: center; /* ALINHA TODO O TEXTO NO MEIO */
+            color: #ffffff; /* COLOCA A COR DA LETRA COMO BRANCO */
+            border-radius: 10px; /* DEIXA AS CORDAS DO BLOCO ARREDONDADAS */
+        }
+
+        /* ESTILO PARA A CAIXA QUE FICA NO CENTRO (COMO UMA JANELA DE NAVE) */
+        .janela-nave {
+            background-color: #16213e; /* UM AZUL UM POUCO MAIS CLARO QUE O FUNDO */
+            border: 2px solid #0f3460; /* COLOCA UMA BORDA AZUL METÁLICA */
+            margin: 25px; /* EMPURRA AS COISAS DE FORA */
+            padding: 20px; /* EMPURRA O TEXTO DE DENTRO */
+            color: #e2e8f0; /* COR DO TEXTO PARA FICAR CONFORTÁVEL DE LER */
+            border-radius: 8px;
+        }
+
+        /* ESTILO DO BOTÃO DE LANÇAMENTO (LARANJA NEON) */
+        #btn-foguete {
+            background: #e94560; /* COR DO BOTÃO (LARANJA/VERMELHO VIBRANTE) */
+            color: white; /* TEXTO DO BOTÃO EM BRANCO */
+            border: none; /* TIRA A BORDA PADRÃO FEIA */
+            padding: 12px 25px; /* DEFINE O TAMANHO INTERNO DO BOTÃO */
+            font-weight: bold; /* DEIXA O TEXTO EM NEGRITO */
+            font-size: 16px;
+            cursor: pointer; /* MOSTRA A MÃOZINHA QUANDO PASSA O MOUSE */
+            border-radius: 5px; /* ARREDONDA O BOTÃO */
+            transition: 0.3s; /* FAZ UM EFEITO SUAVE AO PASSAR O MOUSE */
+        }
+
+        /* EFEITO QUANDO O MOUSE PASSA POR CIMA DO BOTÃO */
+        #btn-foguete:hover {
+            background: #ff6b81; /* MUDA PARA UMA COR MAIS CLARA */
+        }
+
+        /* ESTILO DO TEXTO DO RODAPÉ */
+        .rodape-espacial {
+            font-size: 12px; /* DEIXA A LETRA PEQUENA */
+            margin-top: 50px; /* EMPURRA O RODAPÉ PARA BAIXO */
+            border-top: 1px solid #0f3460; /* CRIA UMA LINHA DIVISÓRIA */
+            padding-top: 10px;
+            color: #8a99ad; /* COR DO TEXTO MAIS APAGADA */
+        }
+    </style>
 </head>
 <body>
-    <header class="cabecalho">
-        <h1>Do milho à música.</h1>
-    </header>
+    
+    <div class="bloco-espacial">
 
-    <main class="conteudo-principal">
-        <section class="card-informativo">
-            <p>Você sabia que milho pode virar bioplástico e se transformar em instrumentos musicais?</p>
-            <button id="btnInterativo" class="btn-primario">Saiba Mais</button>
-        </section>
-    </main>
+        <div style="font-size: 28px; font-weight: bold; letter-spacing: 2px;">
+            🚀 Rumo ao Desconhecido
+        </div>
+        
+        <div class="janela-nave">
+            <p style="font-size: 18px;">
+                Você sabia que a luz do Sol leva cerca de 8 minutos e 20 segundos para chegar até a Terra?
+            </p>
 
-    <footer class="rodape">
-        <p>&copy; Desenvolvido por Júlia.</p>
-    </footer>
+            <button id="btn-foguete" onclick="alert('Prepare-se para o lançamento! 3... 2... 1... 🌌')">
+                LANÇAR FOGUETE
+            </button>
+        </div>
 
-    <script src="script.js" defer></script>
+        <div class="rodape-espacial">
+            Exploração Espacial © 2026 - Criado por mim
+        </div>
+    </div>
+
+    <script>
+        // MANDA UMA MENSAGEM PARA O CONSOLE DO DESENVOLVEDOR
+        console.log("Sistemas da nave iniciados. O site abriu com sucesso!");
+    </script>
 </body>
 </html>
