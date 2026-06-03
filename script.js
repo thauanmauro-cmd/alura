@@ -50,4 +50,5 @@ function atualizarInterface(valorTotal) {
     // Mostra o valor formatado como moeda (R$)
     display.innerText = `O investimento total em sementes é: R$ ${valorTotal.toFixed(2)}`;
     
-    // Se o investimento passar de
+    // Se o investimento passar de 
+    }
